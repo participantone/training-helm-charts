@@ -1,0 +1,7 @@
+annotations:
+  category: Workshop-Demo
+apiVersion: v1
+appVersion: "0.1"
+description: This is the Hello World Configmap Application
+name: hello-world-configmap
+version: 0.1.0

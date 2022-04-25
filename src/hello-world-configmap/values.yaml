@@ -1,0 +1,10 @@
+replicaCount: 1
+image:
+  tag: 1.0
+app:
+  content: "hello world"
+  port: 8080
+ingress:
+    enabled: false
+    ## List of hosts for the ingress
+    host: hello-world-configmap.n-able.xyz
