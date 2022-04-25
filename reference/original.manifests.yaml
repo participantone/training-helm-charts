@@ -81,3 +81,7 @@ spec:
   selector:
     app: hello-world-configmap
   type: ClusterIP
+---
+#{{- $Ingress := .Values.ingress -}}
+#{{- if $Ingress.enabled -}}
+#{{ end }}

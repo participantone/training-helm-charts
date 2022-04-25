@@ -5,6 +5,6 @@ app:
   content: "hello world"
   port: 8080
 ingress:
-    enabled: false
+    enabled: true
     ## List of hosts for the ingress
-    host: hello-world-configmap.n-able.xyz
+    host: hello-world2.part1.xyz

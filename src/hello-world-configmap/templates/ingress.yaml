@@ -1,14 +1,15 @@
+{{- $Ingress := .Values.ingress -}}
+{{- if $Ingress.enabled -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hello-world.part1.xyz-rules
-  namespace: hello-world
+  name: {{ .Values.ingress.host  }}-rules
   annotations:
     kubernetes.io/tls-acme: "true"
 spec:
   ingressClassName: nginx
   rules:
-  - host: hello-world.part1.xyz
+  - host: {{ .Values.ingress.host  }}
     http:
       paths:
       - path: /
@@ -19,6 +20,7 @@ spec:
             port:
                 number: 80
   tls:
-  - secretName: hello-world.part1.xyz-tls
+  - secretName: {{ .Values.ingress.host  }}-tls
     hosts:
-    - hello-world.part1.xyz
+    - {{ .Values.ingress.host  }}
+{{ end }}
